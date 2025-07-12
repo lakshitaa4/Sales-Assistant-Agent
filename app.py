@@ -175,7 +175,7 @@ with st.sidebar:
     st.markdown("---"); st.subheader("Pitch Settings")
     pitch_tone = st.selectbox("Select Pitch Tone:", options=list(PITCH_TEMPLATES.keys()), key="pitch_tone")
 
-company_name = st.text_input("Enter Company Name to research:", key="company_name")
+company_name = st.text_input("Enter Company Name to write pitch for:", key="company_name")
 if st.button("Generate Email"):
     if not all([gemini_api_key, tavily_api_key, company_name]):
         st.warning("Please enter your API keys and a company name.")
