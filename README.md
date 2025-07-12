@@ -1,9 +1,10 @@
-# AI Sales Assistant Agent
----------------------------
+<h1 align='center'><b>AI Sales Assistant Agent 💻</b></h1>
 
 This is an intelligent sales email generator that automatically scrapes company data and crafts **hyper-personalized cold emails** using **Gemini Pro** and **LangChain**.
 
 * * * * *
+
+## Live Link: [Sales Assistant Agent](https://sales-assistant-agent.streamlit.app/)
 
 ### Features:
 
@@ -32,8 +33,6 @@ This is an intelligent sales email generator that automatically scrapes company 
     -   Follow-up
 
 -   Clean UI with **Streamlit**
-
--   Optional: Add to clipboard with a single click
 
 * * * * *
 
