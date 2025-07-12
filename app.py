@@ -1,3 +1,4 @@
+%%writefile app.py
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -164,8 +165,8 @@ PITCH_TEMPLATES = {
     "Formal": "a professional and respectful tone", "Casual": "a friendly, approachable tone",
     "Direct & Punchy": "a direct, to-the-point tone with a sense of urgency", "Follow-up": "a gentle, concise follow-up tone"
 }
-st.set_page_config(page_title="AI Sales Assistant", layout="wide")
-st.title("🤖 AI Sales Assistant")
+st.set_page_config(page_title="Sales Assistant Agent", layout="wide")
+st.title("AI Sales Assistant Agent")
 with st.sidebar:
     st.header("Configuration")
     gemini_api_key = st.text_input("Gemini API Key:", type="password", key="gemini_api_key")
@@ -183,7 +184,7 @@ if st.button("Generate Email"):
     else:
         with st.spinner("Executing sales agent workflow..."):
             try:
-                llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=gemini_api_key, temperature=0.7)
+                llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=gemini_api_key, temperature=0.7)  #please please if required toggle the 
                 search_tool = TavilySearchResults(tavily_api_key=tavily_api_key, max_results=5)
 
                 st.write("Step 1: Finding official website...")
@@ -231,7 +232,7 @@ if st.button("Generate Email"):
                     "user_title": user_title, "pitch_style": PITCH_TEMPLATES[pitch_tone]
                 })
 
-                st.subheader("✅ Agent Finished: Email Draft Ready")
+                st.subheader("Agent Finished: Email Draft Ready")
                 st.text_area("Generated Email", email_text, height=400, key="email_text_area")
                 escaped_text = json.dumps(email_text)
                 button_html = f"""<style>.copy-btn-container{{...}}</style><div class="copy-btn-container"><button ...>...</button></div>"""
