@@ -164,7 +164,7 @@ PITCH_TEMPLATES = {
     "Direct & Punchy": "a direct, to-the-point tone with a sense of urgency", "Follow-up": "a gentle, concise follow-up tone"
 }
 st.set_page_config(page_title="Sales Assistant Agent", layout="wide")
-st.title("AI Sales Assistant Agent")
+st.title("AI Sales Assistant Agent 💻")
 with st.sidebar:
     st.header("Configuration")
     gemini_api_key = st.text_input("Gemini API Key:", type="password", key="gemini_api_key")
